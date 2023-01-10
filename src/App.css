@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.notes-nav{
+    background-color: rgb(218, 212, 212);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .notes-nav h1 {
+    color: rgb(45, 40, 38);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .container {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
   }
-}
+  .notes-list {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .note.new {
+    background-color: #ffffff;
+  }
+  textarea {
+    background-color: #ffffff;
+    border: none;
+    resize: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  
+  .save{
+      background-color: #e1e1e1;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 10px 5px 10px ;
+  }
+  .save:hover{
+      cursor: pointer;
+      background-color: #ededed;
+  
+  }
+  
+  .note {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1rem;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+  }
+  
+  .note-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .delete-note{
+  cursor: pointer;
+  }
+  .delete-note:hover{
+    color: red;
+  } 
+  
